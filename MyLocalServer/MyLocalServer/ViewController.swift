@@ -86,7 +86,7 @@ class Server {
         }
     }
     
-    // MARK: - Private properties
+    // 私有属性
     private let group = NIOTSEventLoopGroup()
     private var host: String
     private var port: Int
@@ -98,8 +98,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
                 
+        /// 测试按钮
         let button = UIButton()
         button.frame = view.bounds
         button.setTitle("加载", for: .normal)
@@ -107,6 +107,7 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(loadWeb(button:)), for: .touchUpInside)
         view.addSubview(button)
         
+        /// 异步开启本地服务
         DispatchQueue.global().async {
             
             let app = Server(host: "localhost", port: 8888)
@@ -116,6 +117,7 @@ class ViewController: UIViewController {
                 
     }
     
+    /// 测试跳转本地服务“http://localhost:8888”
     @objc func loadWeb(button:UIButton) {
         
         button.removeFromSuperview()
