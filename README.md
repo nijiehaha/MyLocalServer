@@ -1,2 +1,2 @@
 # MyLocalServer
-使用SwiftNiO编写的运行在iOS上的纯Swift本地web服务器
+是一个测试demo，功能不完善，仅供学习～
